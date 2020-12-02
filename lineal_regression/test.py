@@ -7,8 +7,9 @@ mean = [2.49412021, 1.53070557, 91.63697735, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 standard_deviation = [1.11470231, 0.72108466, 62.9399184, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 # Open file
-data = np.genfromtxt('data/barcelona_apartments_test.csv', delimiter=',', skip_header=True)
+data = np.genfromtxt('data/barcelona_apartments.csv', delimiter=',', skip_header=True)
 errors = 0
+
 for row in data:
     test = row.copy()
     test[0] = 1
@@ -16,8 +17,8 @@ for row in data:
     test[2] = (test[2] - mean[1]) / standard_deviation[1]
     test[3] = (test[3] - mean[2]) / standard_deviation[2]
     price = np.dot(test, theta)
-    print(str(price) + " - " + str(row[0]) + " ERROR: " + str(abs(price-row[0])))
-    errors += abs(price-row[0])
+    print(str(price) + " - " + str(row[0]) + " ERROR: " + str(abs(price - row[0])))
+    errors += abs(price - row[0])
 
 errors /= data.shape[0]
 print(errors)

@@ -77,7 +77,7 @@ theta, J_history = gradient_descent(X, y, theta, alpha, iterations)
 
 print(theta)
 
-test = [1, 2,2,86,1,0,0,0,0,0,0,0,0]
+test = [1,3,1,70,0,0,0,0,0,0,0,0,0]
 test[1] = (test[1] - mean[0]) / standard_deviation[0]
 test[2] = (test[2] - mean[1]) / standard_deviation[1]
 test[3] = (test[3] - mean[2]) / standard_deviation[2]
