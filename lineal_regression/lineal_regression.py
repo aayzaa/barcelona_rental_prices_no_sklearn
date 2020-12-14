@@ -1,5 +1,6 @@
 from matplotlib import pyplot
 import numpy as np
+import csv
 
 
 def normalize_values(matrix, cols_to_normalize):
@@ -77,7 +78,7 @@ theta, J_history = gradient_descent(X, y, theta, alpha, iterations)
 
 print(theta)
 
-test = [1,3,1,70,0,0,0,0,0,0,0,0,0]
+test = [1,1,1,56,1,0,0,0,0,0,0,0,0]
 test[1] = (test[1] - mean[0]) / standard_deviation[0]
 test[2] = (test[2] - mean[1]) / standard_deviation[1]
 test[3] = (test[3] - mean[2]) / standard_deviation[2]
@@ -88,6 +89,15 @@ print(price)
 
 print(mean)
 print(standard_deviation)
+
+mean = np.insert(mean, 0, 0)
+standard_deviation = np.insert(standard_deviation, 0, 0)
+
+# Save the data in price_prediction
+with open('../price_prediction/data/data.csv', 'w') as record_write:
+    np.savetxt(record_write, np.asarray([theta]), delimiter=',')
+    np.savetxt(record_write, np.asarray([mean]), delimiter=',')
+    np.savetxt(record_write, np.asarray([standard_deviation]), delimiter=',')
 
 
 
