@@ -37,3 +37,4 @@ data.drop(columns=to_drop, inplace=True, axis=1)
 
 # Export the cleaned data
 data.to_csv('cleaned_data/barcelona_apartments.csv', index = False)
+data.to_csv('../lineal_regression/data/barcelona_apartments.csv', index = False)
