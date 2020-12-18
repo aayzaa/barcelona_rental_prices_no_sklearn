@@ -1,28 +1,39 @@
+""" Program that predicts the prices of apartments in Barcelona.
+
+(CC) 2020 Alex Ayza, Barcelona, Spain
+alexayzaleon@gmail.com
+"""
+
 from price_prediction.price_prediction import PricePrediction
+
 
 def main():
     predictor = PricePrediction()
 
     print("This program predicts the rent price of a Barcelona apartment.")
-    print("Type the information requested to get a prediction. Type /'exit/' at any point to stop the program.")
+    print("Type the information requested to get a prediction. Type 'exit' at any point to stop the program.")
 
-    while(True):
+    while True:
         rooms = input("Rooms: ")
-        if rooms == "exit": exit()
+        if rooms == "exit":
+            exit()
 
         bathrooms = input("Bathrooms: ")
-        if bathrooms == "exit": exit()
+        if bathrooms == "exit":
+            exit()
 
         sizem2 = input("Size in squared meters: ")
-        if sizem2 == "exit": exit()
+        if sizem2 == "exit":
+            exit()
 
         print("Area options: " +
-              "eixample, ciutat_vella, gracia, horta_guinardo, les_corts," +
-              "nou_barris, sant_andreu, sant_marti,sants_montjuic")
+              "eixample, ciutat_vella, gracia, horta_guinardo, les_corts, " +
+              "nou_barris, sant_andreu, sant_marti,sants_montjuic, sarria_sant_gervasi")
         area = input("Area: ")
-        if area == "exit": exit()
+        if area == "exit":
+            exit()
 
-        price = predictor.predict_prize(int(rooms), int(bathrooms), int(sizem2), area)
+        price = predictor.predict_price(int(rooms), int(bathrooms), int(sizem2), area)
         print("Predicted prize: " + str(price))
 
 

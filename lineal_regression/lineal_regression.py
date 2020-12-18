@@ -1,9 +1,25 @@
+""" Performs a multilineal regression calculation on the cleaned data.
+
+The operation is done with a gradient descent, since I wanted to
+    practice this technique.
+
+(CC) 2020 Alex Ayza, Barcelona, Spain
+alexayzaleon@gmail.com
+"""
+
 from matplotlib import pyplot
 import numpy as np
 import csv
 
-
 def normalize_values(matrix, cols_to_normalize):
+    """ Normalizes values to be between -1 and 1.
+
+    :param matrix: Matrix to be normalized.
+    :param cols_to_normalize: Index of the columns that need to be normalized.
+    :return: A normalized matrix, a vector with the means of the normalized
+        variables, and a vector with the means of the standard deviation.
+    """
+
     new_matrix = matrix.copy()
     mean = np.zeros(matrix.shape[1])
     deviation = np.zeros(matrix.shape[1])
@@ -19,38 +35,26 @@ def normalize_values(matrix, cols_to_normalize):
     return new_matrix, mean, deviation
 
 
-def computeCostMulti(X, y, theta):
-    # Initialize some useful values
-    m = y.shape[0]  # number of training examples
-
-    # You need to return the following variable correctly
-    J = 0
-
-    # ======================= YOUR CODE HERE ===========================
-    hypothesis = np.dot(X, theta)
-    J = np.dot(hypothesis - y, hypothesis - y) / (2 * m)
-    # ==================================================================
-    return J
-
-
 def gradient_descent(X, y, theta, alpha, iterations):
-    # Initialize some useful values
-    m = y.shape[0]  # number of training examples
+    """ Performs gradient descent with the X matrix and the y vector.
 
-    # make a copy of theta, which will be updated by gradient descent
-    theta = theta.copy()
+    :param X: Matrix with the features of the multilinear regression.
+    :param y: Vector with the results of each row.
+    :param theta: Result of the regression at each step.
+    :param alpha: Factor that modifies how quickly the algorithm converges.
+    :param iterations: Number of iterations to be performed.
+    :return: Theta, the result vector that indicates the weight of each feature.
+    """
 
-    J_history = []
+    # Get the number of training examples
+    m = y.shape[0]
+    theta_cpy = theta.copy()
 
+    # Repeats gradient descent until the number of iterations have happened
     for i in range(iterations):
-        # ======================= YOUR CODE HERE ==========================
-        theta = theta - (alpha / m) * (np.dot(X, theta) - y).dot(X)
-        # =================================================================
+        theta_cpy = theta_cpy - (alpha / m) * (np.dot(X, theta_cpy) - y).dot(X)
 
-        # save the cost J in every iteration
-        J_history.append(computeCostMulti(X, y, theta))
-
-    return theta, J_history
+    return theta_cpy
 
 
 # Open file
@@ -60,24 +64,24 @@ data = np.genfromtxt('data/barcelona_apartments_training.csv', delimiter=',', sk
 y = data[:, 0]
 X = data[:, 1:]
 
-m = y.size #number of training examples
+# Number of training examples
+m = y.size
 
-#normalize values
+# Normalize values (rooms, bathrooms, sizem2)
 columns_to_normalize = [0, 1, 2]
 X, mean, standard_deviation = normalize_values(X, columns_to_normalize)
 
-# Add column of 1s
+# Add column of 1s at the start
 X = np.concatenate([np.ones((m, 1)), X], axis=1)
 
-# START GRADIENT DESCENT
+# Perform gradient descent
 alpha = 0.3
 iterations = 10000
-
 theta = np.zeros(X.shape[1])
-theta, J_history = gradient_descent(X, y, theta, alpha, iterations)
+theta = gradient_descent(X, y, theta, alpha, iterations)
 
-print(theta)
 
+#TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 test = [1,1,1,56,1,0,0,0,0,0,0,0,0]
 test[1] = (test[1] - mean[0]) / standard_deviation[0]
 test[2] = (test[2] - mean[1]) / standard_deviation[1]
@@ -85,11 +89,11 @@ test[3] = (test[3] - mean[2]) / standard_deviation[2]
 price = np.dot(test, theta)
 
 print(price)
-
-
+print(theta)
 print(mean)
 print(standard_deviation)
 
+# Prepare data to be stored
 mean = np.insert(mean, 0, 0)
 standard_deviation = np.insert(standard_deviation, 0, 0)
 

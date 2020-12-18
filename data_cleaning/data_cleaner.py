@@ -1,3 +1,12 @@
+""" This file cleans the data located in raw_data.
+
+It deletes the undesired columns, and cleans the values
+    to be easily manipulated in the program.
+
+(CC) 2020 Alex Ayza, Barcelona, Spain
+alexayzaleon@gmail.com
+"""
+
 import pandas
 import numpy
 

@@ -1,3 +1,16 @@
+""" Performs the normal equation on the data.
+
+The goal of this project was to implement lineal regression,
+    but here I added the normal equation operation in order
+    to check if both arrived at the same results.
+    Even though theta is different, due to the normalization
+    of features in the multilineal regression, both presents
+    the same results when tested against data.
+
+(CC) 2020 Alex Ayza, Barcelona, Spain
+alexayzaleon@gmail.com
+"""
+
 from matplotlib import pyplot
 import numpy as np
 import csv
@@ -9,13 +22,16 @@ data = np.genfromtxt('data/barcelona_apartments_training.csv', delimiter=',', sk
 y = data[:, 0]
 X = data[:, 1:]
 
-m = y.size #number of training examples
+# Number of training examples
+m = y.size
 
 # Add column of 1s
 X = np.concatenate([np.ones((m, 1)), X], axis=1)
 
+# Normal equation
 theta = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(), X)), X.transpose()), y)
 
+# TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 print(theta)
 
 test = [1,1,1,56,1,0,0,0,0,0,0,0,0]
