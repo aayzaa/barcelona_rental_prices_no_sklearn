@@ -21,7 +21,8 @@ data['rooms'] = data['rooms'].str.replace('\D', '', regex=True).astype(int)
 data['bathrooms'] = data['bathrooms'].str.replace('\D', '', regex=True).astype(int)
 
 # Clean the size data and turn it into integers
-data['sizem2'] = data['sizem2'].str.replace('m2', '').astype(int)
+data['sizem2'] = data['sizem2'].str.replace('m2', '')
+data['sizem2'] = data['sizem2'].str.replace('m²', '').astype(int)
 
 # The zones where the flats are located is a nominal value, so it needs to be categorized
 # In order to do that in a lineal regression model, we use dummy variables
@@ -32,13 +33,15 @@ data['sizem2'] = data['sizem2'].str.replace('m2', '').astype(int)
 # That is done for performances issues
 data['eixample'] = numpy.where(data['zone'].str.contains('Eixample'), 1, 0)
 data['ciutat_vella'] = numpy.where(data['zone'].str.contains('Ciutat Vella'), 1, 0)
-data['gracia'] = numpy.where(data['zone'].str.contains('Gràcia'), 1, 0)
 data['horta_guinardo'] = numpy.where(data['zone'].str.contains('Horta-Guinardó'), 1, 0)
+data['horta_guinardo'] = numpy.where(data['zone'].str.contains('Horta - Guinardó'), 1, 0)
+data['gracia'] = numpy.where(data['zone'].str.contains('Gràcia'), 1, 0)
 data['les_corts'] = numpy.where(data['zone'].str.contains('Les Corts'), 1, 0)
 data['nou_barris'] = numpy.where(data['zone'].str.contains('Nou Barris'), 1, 0)
 data['sant_andreu'] = numpy.where(data['zone'].str.contains('Sant Andreu'), 1, 0)
 data['sant_marti'] = numpy.where(data['zone'].str.contains('Sant Martí'), 1, 0)
 data['sants_montjuic'] = numpy.where(data['zone'].str.contains('Sants / Monjuïc'), 1, 0)
+data['sants_montjuic'] = numpy.where(data['zone'].str.contains('Sants - Montjuïc'), 1, 0)
 
 # Delete the undesired columns
 to_drop = ["web-scraper-order", "web-scraper-start-url", "zone"]

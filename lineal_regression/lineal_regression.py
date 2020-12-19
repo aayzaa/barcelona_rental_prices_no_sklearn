@@ -58,7 +58,7 @@ def gradient_descent(X, y, theta, alpha, iterations):
 
 
 # Open file
-data = np.genfromtxt('data/barcelona_apartments_training.csv', delimiter=',', skip_header=True)
+data = np.genfromtxt('data/barcelona_apartments.csv', delimiter=',', skip_header=True)
 
 # Create matrix and vector
 y = data[:, 0]
