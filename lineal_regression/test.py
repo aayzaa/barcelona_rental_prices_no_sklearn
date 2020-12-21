@@ -12,7 +12,7 @@ print(theta)
 data = np.genfromtxt('data/barcelona_apartments.csv', delimiter=',', skip_header=True)
 errors = 0
 
-max_val = 5
+max_val = 6
 apts = []
 
 for row in data:
