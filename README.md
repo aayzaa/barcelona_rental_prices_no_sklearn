@@ -43,9 +43,17 @@ Once I had clean data to work with, I implemented a lineal regression model that
 
 Finally I created a class called PricePrediction that handles all the operations to predict the renting prices, and then implemented a quick main.py file that could be used to test the accuracy of the model.
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+## Process
+
+_Note: this is just a small student project, so the results of this should be taken with a handfull of salt._
+
+I run some test to calculate the average error in euros that the model has. The total error average is 353€, since the data includes apartments that cost thousands and thousands of euros. Below there is a table that has the error depending on the maximum price taken into account.
+
+_For example, for apartments between 0€ and 1500€, the average error is 170€_
+
+#Maximum price | #1000€ | #1500€ | #2000€ | #4000€ | #All apartments
+--- | --- | --- | --- |--- |---
+Average error | 76€ | 170€ | 218€ | 295€ | 353€
 
 ## Tools used 🛠️
 
