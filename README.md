@@ -55,13 +55,51 @@ Average error | 76€ | 170€ | 218€ | 295€ | 353€
 
 _For example, for apartments between 0€ and 1500€, the average error is 170€_
 
-After reading the 15,000 apartments data, the program also defined which neighborhoods are more expensive than others. To my surprise, Eixample gets the top spot as the most expensive area on top of Sarria-Sant Gervasi or Ciutat Vella. The ranked districts can be seen below:
+After reading the 15,000 apartments data, the program also defined which neighborhoods are more expensive than others. To my surprise, Eixample and Sant Marti get the two top spots as the most expensive areas on top of Sarria-Sant Gervasi or Ciutat Vella. The ranked districts can be seen below:
 
-| Rank | District |
-| --------------- | --------------- |
-| 1 | Row 1 Column 2 |
-| 2 | Row 2 Column 2 |
-| 3 | Row 3 Column 2 |
+<p align="center">
+  | Rank | District |
+  | --------------- | --------------- |
+  | 1 | Eixample |
+  | 2 | Sant Marti |
+  | 3 | Sarria-Sant Gervasi |
+  | 4 | Horta-Guinardo |
+  | 5 | Ciutat Vella |
+  | 6 | Les Corts |
+  | 7 | Sants-Montjuic |
+  | 8 | Sant Andreu |
+  | 9 | Gracia |
+  | 10 | Nou Barris |
+</p>
+
+I also found surprising that having more rooms substracts from the price of an apartment. You can see the test below, adding rooms to an apartment decreases the price of it, while adding bathrooms increases it (who doesn't want to have 6 different showers?!!).
+
+```
+Rooms: 2
+Bathrooms: 1
+Size in squared meters: 70
+Area options: eixample, ciutat_vella, gracia, horta_guinardo, les_corts, nou_barris, sant_andreu, sant_marti,sants_montjuic, sarria_sant_gervasi
+Area: gracia
+Predicted price: 915.27€
+```
+_2 Rooms added._
+```
+Rooms: 4
+Bathrooms: 1
+Size in squared meters: 70
+Area options: eixample, ciutat_vella, gracia, horta_guinardo, les_corts, nou_barris, sant_andreu, sant_marti,sants_montjuic, sarria_sant_gervasi
+Area: gracia
+Predicted price: 569.8€
+```
+_Now, let's add 2 Bathrooms._
+```
+Rooms: 4
+Bathrooms: 3
+Size in squared meters: 70
+Area options: eixample, ciutat_vella, gracia, horta_guinardo, les_corts, nou_barris, sant_andreu, sant_marti,sants_montjuic, sarria_sant_gervasi
+Area: gracia
+Predicted price: 1041.13€
+```
 
 ## Tools used 🛠️
 
