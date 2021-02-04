@@ -31,14 +31,6 @@ X = np.concatenate([np.ones((m, 1)), X], axis=1)
 # Normal equation
 theta = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(), X)), X.transpose()), y)
 
-# TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-print(theta)
-
-test = [1,1,1,56,1,0,0,0,0,0,0,0,0]
-price = np.dot(test, theta)
-
-print(price)
-
 # Save the data in price_prediction
 with open('../price_prediction/data/data.csv', 'w') as record_write:
     np.savetxt(record_write, np.asarray([theta]), delimiter=',')
