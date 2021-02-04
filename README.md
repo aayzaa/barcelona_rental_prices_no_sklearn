@@ -47,13 +47,26 @@ Finally I created a class called PricePrediction that handles all the operations
 
 _Note: this is just a small student project, so the results of this should be taken with a handfull of salt._
 
-I run some test to calculate the average error in euros that the model has. The total error average is 353€, since the data includes apartments that cost thousands and thousands of euros. Below there is a table that has the error depending on the maximum price taken into account.
+I run some test to calculate the average error in euros that the model has. The total error average is 353€, since the data includes apartments that cost thousands and thousands of euros. Below there is a table that has the error depending on the maximum price taken into account:
+
+Maximum price | 1000€ | 1500€ | 2000€ | 4000€ | All apartments
+--- | --- | --- | --- |--- |---
+Average error | 76€ | 170€ | 218€ | 295€ | 353€
 
 _For example, for apartments between 0€ and 1500€, the average error is 170€_
 
-#Maximum price | #1000€ | #1500€ | #2000€ | #4000€ | #All apartments
---- | --- | --- | --- |--- |---
-Average error | 76€ | 170€ | 218€ | 295€ | 353€
+After reading the 15,000 apartments data, the program also defined which neighborhoods are more expensive than others. To my surprise, Eixample gets the top spot as the most expensive area on top of Sarria-Sant Gervasi or Ciutat Vella. The ranked districts can be seen below:
+
+<table>
+  <tr>
+    <th>Fruit</th>
+    <td>Banana</td>
+  </tr>
+  <tr>
+    <th>Vegetable</th>
+    <td>Carrot</td>
+  </tr>
+</table>
 
 ## Tools used 🛠️
 
