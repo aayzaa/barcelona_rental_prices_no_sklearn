@@ -1,16 +1,16 @@
-# Barcelona Renting Price Predictor
+# 📈 Barcelona Renting Price Predictor 📉
 
 _A predictor of renting prices in Barcelona._
 
-## How to try it 🚀
+## How to try it 💻
 
-### Requirements 📋
+### Requirements
 
 ```
 python3
 ```
 
-### Using 🔧
+### Use
 
 Download the files and execute main.py. The program will ask for the data of the apartment you want to predict the price of.
 
@@ -31,7 +31,7 @@ To stop the program just type 'exit' at any point.
 Rooms: exit
 ```
 
-## Process
+## Process 👩🏽‍💻
 
 The idea of this small project was to put in practice some theory I learned through an online course. The focus was to build a multilinear regression model that used the gradient descent algorithm to predict the renting prices of apartments in Barcelona.
 
@@ -43,7 +43,7 @@ Once I had clean data to work with, I implemented a lineal regression model that
 
 Finally I created a class called PricePrediction that handles all the operations to predict the renting prices, and then implemented a quick main.py file that could be used to test the accuracy of the model.
 
-## Results
+## Results 📊
 
 _Note: this is just a small student project, so the results of this should be taken with a handfull of salt._
 
