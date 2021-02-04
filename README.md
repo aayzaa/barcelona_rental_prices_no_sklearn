@@ -57,16 +57,11 @@ _For example, for apartments between 0€ and 1500€, the average error is 170�
 
 After reading the 15,000 apartments data, the program also defined which neighborhoods are more expensive than others. To my surprise, Eixample gets the top spot as the most expensive area on top of Sarria-Sant Gervasi or Ciutat Vella. The ranked districts can be seen below:
 
-<table>
-  <tr>
-    <th>Fruit</th>
-    <td>Banana</td>
-  </tr>
-  <tr>
-    <th>Vegetable</th>
-    <td>Carrot</td>
-  </tr>
-</table>
+| Rank | District |
+| --------------- | --------------- |
+| 1 | Row 1 Column 2 |
+| 2 | Row 2 Column 2 |
+| 3 | Row 3 Column 2 |
 
 ## Tools used 🛠️
 
