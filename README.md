@@ -1,4 +1,4 @@
-# 📈 Barcelona Renting Price Predictor 📉
+# 📈 Barcelona Rental Price Predictor 📉
 
 _A predictor of rental prices of apartments in Barcelona._
 
@@ -33,7 +33,7 @@ Rooms: exit
 
 ## Process 👩🏽‍💻
 
-The idea of this small project was to put in practice some theory I learned through an online course. The focus was to build a multilinear regression model that used the gradient descent algorithm to predict the renting prices of apartments in Barcelona.
+The idea of this small project was to put in practice some theory I learned through an online course. The focus was to build a multilinear regression model that used the gradient descent algorithm to predict the rental prices of apartments in Barcelona.
 
 The first step was to gather data on apartments (Price, Rooms, Bathrooms, Size in m2 and District), so I used [Web Scraper](https://webscraper.io/) to **scrape over 15,000 apartments** in the city.
 
@@ -41,7 +41,7 @@ Then I **cleaned the data** deleting incomplete entries, duplicates and outliers
 
 Once I had clean data to work with, I **implemented a linear regression model that used the gradient descent algorithm** to find a vector that would be used to predict prices. To make the algorithm faster and more accurate I **normalized the values** of the size in m2, the rooms and the bathrooms. To check that the results obtained were correct, I also implemented a normal equation calculator that works better in this case since the data gathered is not massive.
 
-Finally I created a class called **PricePrediction that handles all the operations to predict the renting prices**, and then implemented a quick main.py file that could be used to test the accuracy of the model.
+Finally I created a class called **PricePrediction that handles all the operations to predict the rental prices**, and then implemented a quick main.py file that could be used to test the accuracy of the model.
 
 ## Results 📊
 
