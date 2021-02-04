@@ -12,13 +12,9 @@ python3
 
 ### Using 🔧
 
-_Download the files and execute main.py. The program will ask for the data of the apartment you want to predict the price of._ 
+Download the files and execute main.py. The program will ask for the data of the apartment you want to predict the price of.
 
-_First it will ask for rooms, then bathrooms and then the size in squared meters. Answer to these with integers._
-
-_Finally it will ask for the district where the apartment is, and it will show a list of possibilities. Select one by typing it into the field exactly as it is shown._
-
-_The program will then predict the price and show it on screen._
+First it will ask for rooms, then bathrooms and then the size in squared meters. Answer to these with integers. Finally it will ask for the district where the apartment is, and it will show a list of possibilities. Select one by typing it into the field exactly as it is shown. The program will then predict the price and show it on screen.
 
 ```
 Rooms: 2
@@ -29,7 +25,7 @@ Area: ciutat_vella
 Predicted price: 938.69€
 ```
 
-_To stop the program just type 'exit' at any point._
+To stop the program just type 'exit' at any point.
 
 ```
 Rooms: exit
