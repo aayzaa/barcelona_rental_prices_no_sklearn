@@ -80,19 +80,6 @@ iterations = 10000
 theta = np.zeros(X.shape[1])
 theta = gradient_descent(X, y, theta, alpha, iterations)
 
-
-#TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-test = [1,1,1,56,1,0,0,0,0,0,0,0,0]
-test[1] = (test[1] - mean[0]) / standard_deviation[0]
-test[2] = (test[2] - mean[1]) / standard_deviation[1]
-test[3] = (test[3] - mean[2]) / standard_deviation[2]
-price = np.dot(test, theta)
-
-print(price)
-print(theta)
-print(mean)
-print(standard_deviation)
-
 # Prepare data to be stored
 mean = np.insert(mean, 0, 0)
 standard_deviation = np.insert(standard_deviation, 0, 0)
