@@ -1,6 +1,6 @@
 # 📈 Barcelona Renting Price Predictor 📉
 
-_A predictor of renting prices in Barcelona._
+_A predictor of rental prices of apartments in Barcelona._
 
 ## How to try it 💻
 
