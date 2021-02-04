@@ -35,13 +35,17 @@ Rooms: exit
 
 The idea of this small project was to put in practice some theory I learned through an online course. The focus was to build a multilinear regression model that used the gradient descent algorithm to predict the renting prices of apartments in Barcelona.
 
-The first step was to gather apartments data (Price, Rooms, Bathrooms, Size in m2 and District), so I used Web Scraper(https://webscraper.io/) to scrape over 15,000 apartments on the city.
+The first step was to gather apartments data (Price, Rooms, Bathrooms, Size in m2 and District), so I used [Web Scraper](https://webscraper.io/) to scrape over 15,000 apartments on the city.
 
 Then I cleaned the data deleting incomplete entries, duplicates and outliers. In order to do that I created the file data_cleaner.py. All of this process can be found on the data_cleaning folder.
 
 Once I had clean data to work with, I implemented a lineal regression model that used the gradient descent algorithm to find a vector that would be used to predict prices. To make the algorithm faster and more accurate I normalized the values of the size in m2, the rooms and the bathrooms. To check that the results obtained were correct, I also implemented a normal equation calculator that works better in this case since the data gathered is not massive.
 
 Finally I created a class called PricePrediction that handles all the operations to predict the renting prices, and then implemented a quick main.py file that could be used to test the accuracy of the model.
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
 ## Tools used 🛠️
 
