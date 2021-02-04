@@ -43,7 +43,7 @@ Once I had clean data to work with, I implemented a lineal regression model that
 
 Finally I created a class called PricePrediction that handles all the operations to predict the renting prices, and then implemented a quick main.py file that could be used to test the accuracy of the model.
 
-## Process
+## Results
 
 _Note: this is just a small student project, so the results of this should be taken with a handfull of salt._
 
@@ -57,7 +57,6 @@ _For example, for apartments between 0€ and 1500€, the average error is 170�
 
 After reading the 15,000 apartments data, the program also defined which neighborhoods are more expensive than others. To my surprise, Eixample and Sant Marti get the two top spots as the most expensive areas on top of Sarria-Sant Gervasi or Ciutat Vella. The ranked districts can be seen below:
 
-<p align="center">
 | Rank | District |
 | --------------- | --------------- |
 | 1 | Eixample |
@@ -70,7 +69,6 @@ After reading the 15,000 apartments data, the program also defined which neighbo
 | 8 | Sant Andreu |
 | 9 | Gracia |
 | 10 | Nou Barris |
-</p>
 
 I also found surprising that having more rooms substracts from the price of an apartment. You can see the test below, adding rooms to an apartment decreases the price of it, while adding bathrooms increases it (who doesn't want to have 6 different showers?!!).
 
