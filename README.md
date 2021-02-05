@@ -8,6 +8,7 @@ _A predictor of rental prices of apartments in Barcelona._
 
 ```
 python3
+numpy
 ```
 
 ### Use
