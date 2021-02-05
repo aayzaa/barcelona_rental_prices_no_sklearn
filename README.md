@@ -47,7 +47,7 @@ Finally I created a class called **PricePrediction that handles all the operatio
 
 ## Results 📊
 
-_Note: this is just a small personal project, so the results of this should be taken with a handful of salt._
+_Note: this is just a small personal project, these results should be taken with a handful of salt._
 
 I ran some tests to calculate the average error in euros that the model has. The total error average is 353€, since the data includes apartments that cost thousands and thousands of euros. Below there is a table that has the **error depending on the maximum price** taken into account:
 
