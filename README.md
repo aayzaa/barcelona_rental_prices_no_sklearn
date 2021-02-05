@@ -9,6 +9,7 @@ _A predictor of rental prices of apartments in Barcelona._
 ```
 python3
 numpy
+pandas
 ```
 
 ### Use
@@ -105,6 +106,7 @@ Predicted price: 1041.13€
 * [Python](https://www.python.org/) - Language used
 * [Web Scraper](https://webscraper.io/) - To scrape the apartments data
 * [NumPy](https://numpy.org/) - For the mathematic operations
+* [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) - Used for cleaning data operations
 
 ## Version 📌
 
