@@ -1,3 +1,7 @@
+## Note
+
+**A new version of this project has been created in [aayzaa/barcelona-rental-prices](https://github.com/aayzaa/barcelona_rental_prices).** It solves some data issues, adds an **improved model** from the scikit-learn library and has a **web-app implementation** for users to try.
+
 # 📈 Barcelona Rental Price Predictor 📉
 
 _A predictor of rental prices of apartments in Barcelona._
